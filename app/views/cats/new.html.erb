@@ -1,0 +1,26 @@
+<h1>猫の新規登録</h1>
+<%= form_with model: @cat do |form| %>
+  <div>
+    <%= form.label :名前 %></br>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :発見場所 %></br>
+    <%= form.text_field :place %>
+  </div>
+  <div>
+    <%= form.label :特徴 %></br>
+    <%= form.text_field :feature %>
+  </div>
+  <div>
+    <%= form.label :コメント %></br>
+    <%= form.text_area :comment %>
+  </div>
+  <div>
+    <%= form.label :image, "写真を選択" %></br>
+    <%= form.file_field :img1 %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

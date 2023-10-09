@@ -1,0 +1,38 @@
+<h1>詳細</h1>
+<p>
+  タイトル:</br>
+  <%= @cat.name %>
+</p>
+<p>
+  場所:</br>
+  <%= @cat.place %>
+</p>
+<p>
+  特徴:</br>
+  <%= @cat.feature %>
+</p>
+<p>
+  コメント:</br>
+  <%= @cat.comment %>
+</p>
+<p>
+  写真:</br>
+  <%= @cat.img1 %>
+</p>
+
+<n2>コメントを追加する</h2>
+<%= form_with model: [@cat, @cat.comments.build] do |form| %>
+  <div>
+    <%= form.label :名前 %></br>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :コメント %></br>
+    <%= form.text_area :imp %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<%= link_to '戻る', cats_path %>
